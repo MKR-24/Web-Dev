@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Roboto:wght@300&display=swap');
+body{
+    background: rgb(250,227,146);
+    background: linear-gradient(180deg, rgba(250,227,146,1) 0%, rgba(241,201,59,1) 31%, rgba(252,176,69,1) 76%);
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
+@keyframes divmov{
+    0% {
+        opacity: 0;
+        transform:  scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#intro{
+    overflow: hidden;
+    animation-name: divmov;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.image a{
+    transform: translateX(-200%);
+    animation-name: imgmovL;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    
+
+}
+
+
+@keyframes imgmovL{
+    0% {
+        transform: translateX(-200%) ;
+    }
+    100% {
+        
+        transform: translateX(0%);
+        
+    }
+}
+@keyframes imgmovR{
+    0% {
+        transform: translateX(200%) ;
+    }
+    100% {
+        
+        transform: translateX(0%);
+        
+    }
+}
+.image #gif{
+    transform: translateX(200%);
+    animation-name: imgmovR;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+@media (max-width: 768px) {
+    body{
+        font-size:100%
+    }
+    header h1 {
+        font-size: 64px;
+    }
+
+    section#intro p h2 {
+        font-size: auto;
+    }
+    #intro p h3 {
+        font-size: auto;
+    }
+    .image {
+        flex-direction: column;
+    }
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    audio {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    section a {
+        text-align: center;
+    }
+}
+
+@media (min-width: 760px) {
+    body{
+        font-size:100%
+    }
+    header h1 {
+        font-size: 36px;
+    }
+
+    section#intro p h2 {
+        font-size: 28px;
+    }
+
+    section h3 p {
+        font-size: 18px;
+    }
+
+    .image {
+        flex-direction: row;
+    }
+
+    .image img {
+
+        height: auto;
+    }
+    .image #gif {
+        height: auto;
+    }
+    audio {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    section a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    section#intro p h2 {
+        font-size: 18px;
+    }
+
+    section h3 p {
+        font-size: 16px;
+    }
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .image #gif {
+        max-width: 100%;
+        height: auto;
+    }
+    section a {
+        font-size: 14px;
+    }
+}
+
